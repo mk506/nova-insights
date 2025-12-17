@@ -87,7 +87,7 @@ export const CompanyHeroCard = () => {
       </div>
 
       {/* Badges Grid */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-3 gap-3">
         <Badge
           label="Growth Signal"
           value="High"
@@ -96,16 +96,10 @@ export const CompanyHeroCard = () => {
           pulse
         />
         <Badge
-          label="Compliance"
-          value="GDPR Safe"
+          label="Certifications"
+          value="ISO 9001, GDPR"
           icon={<Shield className="w-4 h-4" />}
           color="info"
-        />
-        <Badge
-          label="Brand Voice"
-          value="Disruptive"
-          icon={<Sparkles className="w-4 h-4" />}
-          color="accent"
         />
         <Badge
           label="Data Confidence"
