@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Mock Data</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+      color: #f8fafc;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: #94a3b8;
+    }
+    
+    .section {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(10px);
+    }
+    
+    .section-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 0.5rem;
+    }
+    
+    .data-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 0.5rem 1rem;
+    }
+    
+    .data-label {
+      color: #64748b;
+      font-size: 0.875rem;
+    }
+    
+    .data-value {
+      color: #f1f5f9;
+      font-size: 0.875rem;
+    }
+    
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      margin: 0.25rem;
+    }
+    
+    .tag-blue { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+    .tag-green { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+    .tag-purple { background: rgba(168, 85, 247, 0.2); color: #c084fc; }
+    .tag-yellow { background: rgba(234, 179, 8, 0.2); color: #facc15; }
+    .tag-cyan { background: rgba(6, 182, 212, 0.2); color: #22d3ee; }
+    
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      margin: 0.25rem;
+    }
+    
+    .badge-success { background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80; }
+    .badge-info { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; }
+    .badge-warning { background: rgba(234, 179, 8, 0.1); border: 1px solid rgba(234, 179, 8, 0.3); color: #facc15; }
+    
+    .org-node {
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      margin: 0.5rem 0;
+    }
+    
+    .org-children {
+      margin-left: 2rem;
+      border-left: 2px solid rgba(59, 130, 246, 0.3);
+      padding-left: 1rem;
+    }
+    
+    .competitor-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+    
+    li {
+      margin: 0.25rem 0;
+      color: #cbd5e1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Dashboard Mock Data Reference</h1>
+    
+    <!-- Company Hero Card Data -->
+    <div class="section">
+      <div class="section-title">🏢 Company Hero Card (contact_information.csv + social_media.csv)</div>
+      <div class="data-grid">
+        <span class="data-label">Company Name:</span>
+        <span class="data-value">TechNova Solutions</span>
+        
+        <span class="data-label">Domain:</span>
+        <span class="data-value">technova.io</span>
+        
+        <span class="data-label">Headquarters:</span>
+        <span class="data-value">San Francisco, CA</span>
+        
+        <span class="data-label">Phone:</span>
+        <span class="data-value">+1 555-0123</span>
+        
+        <span class="data-label">Founded:</span>
+        <span class="data-value">2018</span>
+        
+        <span class="data-label">LinkedIn:</span>
+        <span class="data-value">https://linkedin.com/company/technova</span>
+        
+        <span class="data-label">Twitter:</span>
+        <span class="data-value">https://twitter.com/technova</span>
+        
+        <span class="data-label">Facebook:</span>
+        <span class="data-value">https://facebook.com/technova</span>
+        
+        <span class="data-label">Revenue:</span>
+        <span class="data-value">$12.5M</span>
+        
+        <span class="data-label">Employees:</span>
+        <span class="data-value">127</span>
+        
+        <span class="data-label">Last Updated:</span>
+        <span class="data-value">2 hours ago</span>
+      </div>
+      
+      <div style="margin-top: 1rem;">
+        <strong class="data-label">Badges:</strong><br>
+        <span class="badge badge-success">🚀 Growth Signal: Series B</span>
+        <span class="badge badge-info">🛡️ GDPR: Compliant</span>
+        <span class="badge badge-warning">📊 Data Confidence: 94%</span>
+      </div>
+    </div>
+    
+    <!-- Sales Sniper Card Data -->
+    <div class="section">
+      <div class="section-title">🎯 Sales Sniper Card</div>
+      <div class="data-grid">
+        <span class="data-label">Sales Score:</span>
+        <span class="data-value">87/100</span>
+        
+        <span class="data-label">Score Label:</span>
+        <span class="data-value">High Potential</span>
+      </div>
+      
+      <div style="margin-top: 1rem;">
+        <strong class="data-label">Matching Criteria:</strong>
+        <ul>
+          <li>✅ Tech Stack Match (matched: true)</li>
+          <li>✅ Budget Indicator (matched: true)</li>
+          <li>✅ Growth Phase (matched: true)</li>
+          <li>❌ Recent Funding (matched: false)</li>
+          <li>✅ Decision Maker Access (matched: true)</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Tech Stack Panel Data -->
+    <div class="section">
+      <div class="section-title">💻 Tech Stack Panel</div>
+      
+      <div style="margin-bottom: 1rem;">
+        <strong class="data-label">Tech Stack:</strong><br>
+        <span class="tag tag-blue">React (Frontend)</span>
+        <span class="tag tag-blue">TypeScript (Frontend)</span>
+        <span class="tag tag-green">Node.js (Backend)</span>
+        <span class="tag tag-green">Python (Backend)</span>
+        <span class="tag tag-purple">AWS (Cloud)</span>
+        <span class="tag tag-purple">GCP (Cloud)</span>
+        <span class="tag tag-yellow">PostgreSQL (Database)</span>
+        <span class="tag tag-cyan">Docker (DevOps)</span>
+      </div>
+      
+      <div style="margin-bottom: 1rem;">
+        <strong class="data-label">Key Services (services.csv):</strong>
+        <ul>
+          <li>Cloud Migration</li>
+          <li>AI/ML Solutions</li>
+          <li>DevOps Consulting</li>
+          <li>Custom Development</li>
+        </ul>
+      </div>
+      
+      <div>
+        <strong class="data-label">Certifications (certifications.csv):</strong><br>
+        <span class="badge badge-success">ISO 27001</span>
+        <span class="badge badge-info">SOC 2 Type II</span>
+        <span class="badge badge-warning">AWS Partner</span>
+      </div>
+    </div>
+    
+    <!-- Org Chart Panel Data -->
+    <div class="section">
+      <div class="section-title">👥 Org Chart Panel</div>
+      <div class="data-grid" style="margin-bottom: 1rem;">
+        <span class="data-label">Total Contacts:</span>
+        <span class="data-value">12</span>
+        
+        <span class="data-label">Email Confidence:</span>
+        <span class="data-value">94%</span>
+      </div>
+      
+      <div class="org-node">
+        <strong>Sarah Chen</strong> - CEO<br>
+        <span class="data-label">sarah@technova.io</span>
+        
+        <div class="org-children">
+          <div class="org-node">
+            <strong>Michael Ross</strong> - CTO<br>
+            <span class="data-label">michael@technova.io</span>
+            
+            <div class="org-children">
+              <div class="org-node">
+                <strong>Emily Zhang</strong> - Lead Engineer<br>
+                <span class="data-label">emily@technova.io</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="org-node">
+            <strong>David Kim</strong> - VP Sales<br>
+            <span class="data-label">david@technova.io</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Competitor Cluster Data -->
+    <div class="section">
+      <div class="section-title">🔗 Competitor Cluster</div>
+      <div class="data-grid" style="margin-bottom: 1rem;">
+        <span class="data-label">Central Company:</span>
+        <span class="data-value">TechNova</span>
+      </div>
+      
+      <strong class="data-label">Competitors:</strong>
+      <div class="competitor-item">
+        <span>DataFlow Inc</span>
+        <span class="tag tag-purple">Direct (Strength: 0.9)</span>
+      </div>
+      <div class="competitor-item">
+        <span>CloudSync Pro</span>
+        <span class="tag tag-blue">Indirect (Strength: 0.7)</span>
+      </div>
+      <div class="competitor-item">
+        <span>ByteScale</span>
+        <span class="tag tag-purple">Direct (Strength: 0.85)</span>
+      </div>
+      <div class="competitor-item">
+        <span>NexGen Systems</span>
+        <span class="tag tag-green">Partner (Strength: 0.6)</span>
+      </div>
+      <div class="competitor-item">
+        <span>Quantum Labs</span>
+        <span class="tag tag-blue">Indirect (Strength: 0.5)</span>
+      </div>
+    </div>
+    
+    <!-- JSON Data Export -->
+    <div class="section">
+      <div class="section-title">📦 Raw JSON Data</div>
+      <pre style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.75rem; color: #94a3b8;">
+{
+  "company": {
+    "name": "TechNova Solutions",
+    "domain": "technova.io",
+    "headquarters": "San Francisco, CA",
+    "phone": "+1 555-0123",
+    "founded": 2018,
+    "revenue": "$12.5M",
+    "employees": 127
+  },
+  "socialMedia": {
+    "linkedin": "https://linkedin.com/company/technova",
+    "twitter": "https://twitter.com/technova",
+    "facebook": "https://facebook.com/technova"
+  },
+  "techStack": [
+    { "name": "React", "category": "Frontend" },
+    { "name": "TypeScript", "category": "Frontend" },
+    { "name": "Node.js", "category": "Backend" },
+    { "name": "Python", "category": "Backend" },
+    { "name": "AWS", "category": "Cloud" },
+    { "name": "GCP", "category": "Cloud" },
+    { "name": "PostgreSQL", "category": "Database" },
+    { "name": "Docker", "category": "DevOps" }
+  ],
+  "services": [
+    "Cloud Migration",
+    "AI/ML Solutions",
+    "DevOps Consulting",
+    "Custom Development"
+  ],
+  "certifications": [
+    { "name": "ISO 27001", "type": "security" },
+    { "name": "SOC 2 Type II", "type": "compliance" },
+    { "name": "AWS Partner", "type": "partnership" }
+  ],
+  "salesScore": {
+    "score": 87,
+    "label": "High Potential",
+    "criteria": [
+      { "name": "Tech Stack Match", "matched": true },
+      { "name": "Budget Indicator", "matched": true },
+      { "name": "Growth Phase", "matched": true },
+      { "name": "Recent Funding", "matched": false },
+      { "name": "Decision Maker Access", "matched": true }
+    ]
+  },
+  "orgChart": {
+    "name": "Sarah Chen",
+    "role": "CEO",
+    "email": "sarah@technova.io",
+    "children": [
+      {
+        "name": "Michael Ross",
+        "role": "CTO",
+        "email": "michael@technova.io",
+        "children": [
+          { "name": "Emily Zhang", "role": "Lead Engineer", "email": "emily@technova.io" }
+        ]
+      },
+      { "name": "David Kim", "role": "VP Sales", "email": "david@technova.io" }
+    ]
+  },
+  "competitors": [
+    { "name": "DataFlow Inc", "relation": "direct", "strength": 0.9 },
+    { "name": "CloudSync Pro", "relation": "indirect", "strength": 0.7 },
+    { "name": "ByteScale", "relation": "direct", "strength": 0.85 },
+    { "name": "NexGen Systems", "relation": "partner", "strength": 0.6 },
+    { "name": "Quantum Labs", "relation": "indirect", "strength": 0.5 }
+  ]
+}
+      </pre>
+    </div>
+  </div>
+</body>
+</html>
