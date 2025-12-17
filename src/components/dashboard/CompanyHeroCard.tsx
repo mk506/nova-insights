@@ -1,4 +1,4 @@
-import { Shield, Zap, Sparkles, AlertTriangle, Check, Globe, Building2, MapPin, Calendar, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Shield, Zap, AlertTriangle, Check, Globe, Building2, MapPin, Calendar, Linkedin, Twitter, Facebook, Phone } from "lucide-react";
 
 interface BadgeProps {
   label: string;
@@ -70,16 +70,20 @@ export const CompanyHeroCard = () => {
       </div>
 
       {/* Mandatory Details Row */}
-      <div className="flex items-center gap-6 mb-6 pb-4 border-b border-white/10">
+      <div className="flex flex-wrap items-center gap-4 mb-6 pb-4 border-b border-white/10">
         <div className="flex items-center gap-2 text-sm">
           <MapPin className="w-4 h-4 text-muted-foreground" />
           <span className="text-muted-foreground">San Francisco, CA</span>
         </div>
         <div className="flex items-center gap-2 text-sm">
+          <Phone className="w-4 h-4 text-muted-foreground" />
+          <span className="text-muted-foreground">+1 555-0123</span>
+        </div>
+        <div className="flex items-center gap-2 text-sm">
           <Calendar className="w-4 h-4 text-muted-foreground" />
           <span className="text-muted-foreground">Founded 2018</span>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 ml-auto">
           <SocialIcon icon={Linkedin} href="https://linkedin.com/company/technova" label="LinkedIn" />
           <SocialIcon icon={Twitter} href="https://twitter.com/technova" label="Twitter" />
           <SocialIcon icon={Facebook} href="https://facebook.com/technova" label="Facebook" />
